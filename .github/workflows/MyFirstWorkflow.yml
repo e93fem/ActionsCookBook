@@ -24,13 +24,13 @@ jobs:
     environment: Test
     needs: first_job
     steps:
-      - run: tree
+       - uses: actions/checkout@v4.1.0
   Load-Test:
     runs-on: ubuntu-latest
     environment: Load-Test
     needs: first_job
     steps:
-      - run: tree
+       - uses: actions/checkout@v4.1.0
   Production:
     runs-on: ubuntu-latest
     environment:
@@ -38,4 +38,4 @@ jobs:
       url: https://writeabout.net
     needs: [Test, Load-Test]
     steps:
-      - run: tree
+       - uses: actions/checkout@v4.1.0
