@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest  
     steps:
       - name: Greet the user
-      - run: | 
+        run: | 
           echo "Hello ${{ vars.WHO_TO_GREET }} 👋 from ${{ github.actor }}."
           sec=$(echo ${{ secrets.MY_SECRET }} | sed 's/./& /g')
           echo "My secret is '$sec'."
